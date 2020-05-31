@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebCalc.Services;
 
 namespace WebCalc
 {
@@ -26,6 +27,9 @@ namespace WebCalc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<CalcService>();
+            services.AddScoped<CalcResults>();
+            services.AddTransient<Logger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

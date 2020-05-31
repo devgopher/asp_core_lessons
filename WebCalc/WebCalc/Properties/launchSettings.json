@@ -12,7 +12,7 @@
     "WebCalc": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "calc",
+      "launchUrl": "api/calc",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
